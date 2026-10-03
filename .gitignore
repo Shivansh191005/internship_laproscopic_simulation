@@ -1,0 +1,43 @@
+# ---- Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ---- editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- large or private data (do NOT upload surgical videos)
+data/*
+!data/.gitkeep
+
+# ---- voice model (download, see README)
+models/*
+!models/.gitkeep
+
+# ---- model weights: only best.pt is uploaded (~23 MB).
+# Delete the "!weights/best.pt" line to keep your model private.
+weights/*
+!weights/.gitkeep
+!weights/best.pt
+
+# ---- run outputs
+runs/*
+!runs/.gitkeep
+*.mp4
+*.avi
+*.zip
+
+# ---- generated texture cache
+assets/textures/.cache/
+
+# ---- local scratch
+Claude outputs/
+_*.py

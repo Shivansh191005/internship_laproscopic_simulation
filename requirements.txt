@@ -1,0 +1,29 @@
+# Install torch FIRST from the CUDA index, or pip pulls the CPU build:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# then:
+#   pip install -r requirements.txt
+
+ultralytics>=8.3.0
+pybullet>=3.2.6
+opencv-python>=4.9.0
+numpy>=1.26,<2.2
+matplotlib>=3.7              # analyze.py (already pulled in by ultralytics)
+
+# Voice commands (optional - system runs keyboard-only without these).
+# Also download vosk-model-small-en-us-0.15 from https://alphacephei.com/vosk/models
+# and unzip to  models/vosk-small-en/
+vosk>=0.3.45
+sounddevice>=0.4.6
+pyttsx3>=2.90               # only for voice_test.py (computer voice)
+
+# Realistic OR panel (or_render.py). Optional: without these the old
+# PyBullet renderer is used automatically.
+pyrender==0.1.45
+trimesh>=4.0
+PyOpenGL==3.1.0
+pyglet<2                     # pyrender's offscreen context on Windows/macOS
+Pillow>=10
+scipy>=1.10
+
+# Optional: memory column in the performance report on Windows
+psutil>=5.9
